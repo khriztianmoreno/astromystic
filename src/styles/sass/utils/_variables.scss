@@ -1,0 +1,34 @@
+// GRID SYSTEM VARIABLES
+$breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1440px,
+);
+
+$container: (
+  sm: 90%,
+  md: 720px,
+  lg: 1080px,
+);
+
+$gutters: (
+  xs: 10px,
+  sm: 10px,
+  md: 10px,
+  lg: 10px,
+);
+
+$colors: (
+  'black': #000000,
+  'darkGray': #32323c,
+  'lightGray': #e6e6dc,
+  'white': #ffffff,
+  'transparent': transparent,
+  'blue': #3141eb,
+  'green': #00dda5,
+  'yellow': #ffcd00,
+  'pink': #ff3d5e,
+  'purple': #a582e3,
+);
