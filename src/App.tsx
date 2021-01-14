@@ -29,7 +29,7 @@ type Props = {
 const og = {
   desc: 'Marca de joyería de diseñador que se inspira en la magia blanca, la astrología, el tarot y los rituales para la creación de piezas únicas o personalizadas, con un sentido místico y espiritual que busca la trascendencia del portador y su esencia.',
   image:
-    'https://images.prismic.io/daca/44ee9616-fd0b-4afc-a7d4-f10ee02876af_metadata-image.png?auto=compress,format',
+    'https://res.cloudinary.com/khriztianmoreno/image/upload/v1610582550/astromystic/cover.png',
   title: 'Astromystic',
   type: 'article',
   url: process.env.GATSBY_OG_URL,
@@ -38,7 +38,7 @@ const og = {
 const tw = {
   card: 'summary_large_image',
   image:
-    'https://images.prismic.io/daca/44ee9616-fd0b-4afc-a7d4-f10ee02876af_metadata-image.png?auto=compress,format',
+    'https://res.cloudinary.com/khriztianmoreno/image/upload/v1610582550/astromystic/cover.png',
 }
 
 const App = (props: Props) => (
