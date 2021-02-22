@@ -61,7 +61,7 @@
     "@storybook/addons": "5.3.21",
     "@storybook/react": "5.3.21",
     "@svgr/cli": "5.5.0",
-    "@testing-library/react": "9.5.0",
+    "@testing-library/react": "11.2.5",
     "@types/jest": "24.9.1",
     "@types/lodash": "4.14.167",
     "@types/react-slick": "0.23.4",
