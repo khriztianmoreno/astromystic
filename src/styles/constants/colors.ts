@@ -6,12 +6,14 @@
 
 const black = '#000000'
 const espresso = '#601717'
+const marigold = '#BC8422'
 const silver = '#c2c2c2'
 const white = '#FFFFFF'
 
 export type ColorsType = {
   black: String
   espresso: String
+  marigold: String
   silver: String
   white: String
 }
@@ -19,6 +21,7 @@ export type ColorsType = {
 export default {
   black,
   espresso,
+  marigold,
   silver,
   white,
 }
