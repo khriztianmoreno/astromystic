@@ -41,6 +41,10 @@ const Description = styled('p')(
     letter-spacing: 0.1em;
     line-height: 2rem;
     text-align: center;
+
+    ${media.lg`
+      margin-bottom: 8rem;
+    `}
   `
 )
 const BottomDescription = styled('p')(
@@ -75,6 +79,11 @@ const AstromysticLogoContainer = styled.div`
 `
 const Form = styled('form')`
   margin-bottom: 10rem;
+
+  ${media.lg`
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  `}
 `
 const Label = styled('label')(
   ({ theme }) => css`
