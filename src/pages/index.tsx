@@ -17,19 +17,6 @@ export const Container = styled('div')`
     height: 8rem;
   `}
 `
-const GoldenRing = styled.div`
-  background-image: url('img/golden_ring_mb.png');
-  background-size: cover;
-  height: 100vh;
-  left: -3rem;
-  position: fixed;
-  top: 0;
-  width: 110vw;
-
-  ${media.md`
-    display: none;
-  `}
-`
 const Main = styled('main')`
   background-image: url('img/main_texture_mobile.png');
   background-repeat: no-repeat;
@@ -136,7 +123,6 @@ const SubscriptionChecked = styled('label')(
 const IndexPage = () => (
   <Container>
     <SideText label="proximamente" />
-    <GoldenRing />
     <Main>
       <Description>
         Bienvenido a ASTROMYSTIC, <br/>
