@@ -15,6 +15,7 @@ export const Container = styled('div')`
 
   ${media.lg`
     height: 8rem;
+    padding-top: 0.5rem;
   `}
 `
 const Main = styled('main')`
@@ -56,6 +57,10 @@ const BottomDescription = styled('p')(
     line-height: 2rem;
     text-align: center;
     padding: 3rem;
+
+    ${media.md`
+      background-image: none;
+  `}
   `
 )
 const LogoContainer = styled.div`
@@ -118,15 +123,51 @@ const SubscriptionChecked = styled('label')(
     }
   `
 )
+const ContainerTextureImage = styled.div`
+  padding-right: 8rem;
+`
+const TextureImage = styled.div`
+  display: none;
+
+  ${media.md`
+    background-image: url('img/texture_text_desktop.png');
+    display: block;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 3rem;
+  `}
+`
+const ContainerLeftSideText = styled.div`
+  ${media.md`
+    position: absolute;
+    top: 27vh;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+  `}
+`
+const ContainerRightSideText = styled.div`
+  ${media.md`
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0;
+    top: 27vh;
+  `}
+`
 
 
 const IndexPage = () => (
   <Container>
-    <SideText label="proximamente" />
+    <ContainerLeftSideText>
+      <SideText label="proximamente" />
+    </ContainerLeftSideText>
     <Main>
       <div className="row center-row">
-        <div className="col-xs-12 col-md-2 col-lg-3 " />
-        <div className="col-xs-12 col-md-8 col-lg-6">
+        <ContainerTextureImage className="col-xs-12 col-md-3 col-lg-4">
+          <TextureImage />
+        </ContainerTextureImage>
+        <div className="col-xs-12 col-md-6 col-lg-4">
           <Description>
             Bienvenido a ASTROMYSTIC, <br/>
             un mundo de magia, misticismo y conexión
@@ -153,10 +194,12 @@ const IndexPage = () => (
             y mi mundo muy pronto.
           </BottomDescription>
         </div>
-        <div className="col-xs-12 col-md-2 col-lg-3" />
+        <div className="col-xs-12 col-md-4 col-lg-4" />
       </div>
     </Main>
-    <SideText label="proximamente" bottom />
+    <ContainerRightSideText>
+      <SideText label="proximamente" bottom />
+    </ContainerRightSideText>
   </Container>
 )
 

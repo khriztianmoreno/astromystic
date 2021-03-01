@@ -28,11 +28,11 @@ const Text = styled('div')(
         margin-right: auto;
         position: fixed;
         right: 0;
-      `: 'relative'
+      `: css`position: relative`
     };
   `
 )
 
-const SideText = ({ label, bottom }: TextProps) => <Text bottom= {bottom}><p>{label}</p></Text>
+const SideText = ({ label, bottom }: TextProps) => <Text bottom={bottom}><p>{label}</p></Text>
 
 export default SideText
