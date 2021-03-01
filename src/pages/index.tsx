@@ -124,31 +124,37 @@ const IndexPage = () => (
   <Container>
     <SideText label="proximamente" />
     <Main>
-      <Description>
-        Bienvenido a ASTROMYSTIC, <br/>
-        un mundo de magia, misticismo y conexión
-        que no te trajo a esta página por casualidad.
-      </Description>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
-      <AstromysticLogoContainer>
-        <AstromysticLogo />
-      </AstromysticLogoContainer>
-      <Form>
-        <Label htmlFor="email">
-          <span>Email</span>
-        </Label>
-        <Input type="email" name="email" id="email" />
-        <SubscriptionChecked>
-          <input type="checkbox" name="subscribe" />
-          <span>Quiero conocer mas sobre Astromystic y acepto las condiciones.</span>
-        </SubscriptionChecked>
-      </Form>
-      <BottomDescription>
-        Conocerás todo sobre mí
-        y mi mundo muy pronto.
-      </BottomDescription>
+      <div className="row center-row">
+        <div className="col-xs-12 col-md-2 col-lg-3 " />
+        <div className="col-xs-12 col-md-8 col-lg-6">
+          <Description>
+            Bienvenido a ASTROMYSTIC, <br/>
+            un mundo de magia, misticismo y conexión
+            que no te trajo a esta página por casualidad.
+          </Description>
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
+          <AstromysticLogoContainer>
+            <AstromysticLogo />
+          </AstromysticLogoContainer>
+          <Form>
+            <Label htmlFor="email">
+              <span>Email</span>
+            </Label>
+            <Input type="email" name="email" id="email" />
+            <SubscriptionChecked>
+              <input type="checkbox" name="subscribe" />
+              <span>Quiero conocer mas sobre Astromystic y acepto las condiciones.</span>
+            </SubscriptionChecked>
+          </Form>
+          <BottomDescription>
+            Conocerás todo sobre mí
+            y mi mundo muy pronto.
+          </BottomDescription>
+        </div>
+        <div className="col-xs-12 col-md-2 col-lg-3" />
+      </div>
     </Main>
     <SideText label="proximamente" bottom />
   </Container>
