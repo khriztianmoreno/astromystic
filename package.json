@@ -27,7 +27,7 @@
     "gatsby-plugin-sass": "2.8.0",
     "gatsby-plugin-sharp": "2.12.1",
     "gatsby-plugin-typescript": "2.10.0",
-    "gatsby-source-prismic": "2.3.0-previews.12",
+    "gatsby-source-prismic": "3.3.4",
     "gatsby-transformer-sharp": "2.10.1",
     "graphql": "14.7.0",
     "lodash": "4.17.20",
