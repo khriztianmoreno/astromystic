@@ -21,16 +21,19 @@ const Main = styled('main')`
   background-image: url('img/main_texture_mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+    align-items: center;
   margin: 4rem 2rem;
   min-height: 75vh;
   padding-bottom: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 8.5rem;
+  padding-top: 3.5rem;
 
   ${media.md`
     background-image: url('img/main_texture_desktop.png');
-    min-height: 80vh;
+    min-height: 88vh;
     margin: 4rem;
   `}
 `
@@ -46,8 +49,8 @@ const Description = styled('p')(
     text-align: center;
 
     ${media.md`
-      font-size: 2.5rem;
-      line-height: 2.4rem;
+      font-size: 2rem;
+      line-height: 2rem;
     `}
   `
 )
@@ -62,8 +65,8 @@ const BottomDescription = styled('p')(
     text-align: center;
 
     ${media.md`
-      font-size: 3rem;
-      line-height: 89%;
+      font-size: 2rem;
+      line-height: 2rem;
     `}
   `
 )
@@ -74,10 +77,11 @@ const ContainerFooter = styled.div`
   background-image: url('img/bottom_texture_mb.png');
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 
   ${media.md`
     background-image: none;
+    padding: 3rem 0;
   `}
 `
 const AstromysticLogoContainer = styled.div`
@@ -85,14 +89,15 @@ const AstromysticLogoContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin: 5rem 0;
+  margin: 2.5rem 0;
 
   ${media.md`
     margin-top: 5rem;
   `}
 `
 const Form = styled('form')`
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
 
   ${media.lg`
     margin-top: 8rem;
@@ -162,9 +167,6 @@ const SubscriptionChecked = styled('label')(
 
     span {
       margin-top: 1rem;
-      ${media.md`
-        margin-top: 2rem;
-      `}
     }
   `
 )
@@ -223,6 +225,10 @@ const ContainerRightSideText = styled.div`
   `}
 `
 const ContentMain = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   z-index: 4;
 `
@@ -253,6 +259,12 @@ const BorderLine = styled.img`
     margin: 1.5rem 0;
   `}
 `
+const Rings = styled.img`
+  height: 100vh;
+`
+const Row = styled.div`
+  width: 100%;
+`
 
 const IndexPage = () => {
   const [form, setForm] = useState({})
@@ -275,30 +287,32 @@ const IndexPage = () => {
     <Container>
       <AbsoluteCenterDiv>
         <GoldenContainer>
-          <img src="img/golden_ring.png" alt="Golden" />
+          <Rings src="img/golden_ring.png" alt="Golden" />
         </GoldenContainer>
       </AbsoluteCenterDiv>
       <ContainerLeftSideText>
         <SideText label="proximamente" />
       </ContainerLeftSideText>
       <Main>
-        <div className="row center-row">
+        <Row className="row center-row">
           <ContainerTextureImage className="col-xs-12 col-md-3 col-lg-4">
             <TextureImage />
           </ContainerTextureImage>
           <ContentMain className="col-xs-12 col-md-6 col-lg-4">
-            <BorderLine src="img/border_line.png" alt="border line" />
-            <Description>
-              Bienvenidos <br />
-              a un mundo de magia,
-              <br />
-              misticismo y conexión
-              <br />
-              que no te trajo a esta página
-              <br />
-              por casualidad.
-            </Description>
-            <BorderLine src="img/border_line.png" alt="border line" />
+            <div>
+              <BorderLine src="img/border_line.png" alt="border line" />
+              <Description>
+                Bienvenidos <br />
+                a un mundo de magia,
+                <br />
+                misticismo y conexión
+                <br />
+                que no te trajo a esta página
+                <br />
+                por casualidad.
+              </Description>
+              <BorderLine src="img/border_line.png" alt="border line" />
+            </div>
             <AstromysticLogoContainer>
               <img src="img/logo_astromystic.png" alt="logo_astromystic" />
             </AstromysticLogoContainer>
@@ -339,7 +353,7 @@ const IndexPage = () => {
             </ContainerFooter>
           </ContentMain>
           <div className="col-xs-12 col-md-4 col-lg-4" />
-        </div>
+        </Row>
       </Main>
       <ContainerRightSideText>
         <SideText label="proximamente" bottom />
