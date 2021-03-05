@@ -7,17 +7,24 @@ interface TextProps {
   label: string
 }
 
-const Text = styled('div')(
-  {
-    fontSize: '3.5rem',
-    fontStyle: 'normal',
-    lineHeight: '2.1rem',
-  },
+const Text = styled('div')<TextProps>(
   ({ theme, bottom }) => css`
     color: ${theme.colors.espresso};
     font-family: ${theme.fontFaces.Fortescue.regular};
     text-transform: uppercase;
     text-align: center;
+
+    p {
+      font-size: 3.5rem;
+      font-style: normal;
+      line-height: 2.1rem;
+
+      ${media.md`
+        font-size: 6rem;
+      `}
+    }
+
+
 
     ${
       bottom
