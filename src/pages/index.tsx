@@ -25,7 +25,7 @@ const Main = styled('main')`
   justify-content: center;
   align-items: center;
   margin: 1rem 2rem;
-  min-height: 75vh;
+  min-height: 88vh;
   padding-bottom: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -34,7 +34,6 @@ const Main = styled('main')`
   ${media.md`
     background-image: url('img/main_texture_desktop.png');
     min-height: 88vh;
-    margin: 4rem;
   `}
 `
 const Description = styled('p')(
@@ -73,10 +72,6 @@ const BottomDescription = styled('p')(
 const HelenaImage = styled.img`
   margin-top: -1.5rem;
   height: 8rem;
-
-  ${media.md`
-    height: 14rem;
-  `}
 `
 const ContainerFooter = styled.div`
   background-image: url('img/bottom_texture_mb.png');
@@ -274,7 +269,7 @@ const Logo = styled.img`
   height: 7rem;
 
   ${media.md`
-    height: 17rem;
+    height: 10rem;
   `}
 `
 
@@ -314,13 +309,10 @@ const IndexPage = () => {
             <div>
               <BorderLine src="img/border_line.png" alt="border line" />
               <Description>
-                Bienvenidos <br />
+                Bienvenido
                 a un mundo de magia,
-                <br />
                 misticismo y conexión
-                <br />
                 que no te trajo a esta página
-                <br />
                 por casualidad.
               </Description>
               <BorderLine src="img/border_line.png" alt="border line" />

@@ -13,6 +13,11 @@ const Text = styled('div')<TextProps>(
     font-family: ${theme.fontFaces.Fortescue.regular};
     text-transform: uppercase;
     text-align: center;
+    display: none;
+
+    ${media.md`
+      display: block;
+    `}
 
     p {
       font-size: 3.5rem;
