@@ -35,7 +35,7 @@ const Text = styled('div')<TextProps>(
         margin-right: auto;
         position: fixed;
         right: 0;
-      `: css`position: relative`
+      `: css`position: relative;`
     };
   `
 )

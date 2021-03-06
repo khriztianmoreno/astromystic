@@ -23,8 +23,8 @@ const Main = styled('main')`
   background-size: cover;
   display: flex;
   justify-content: center;
-    align-items: center;
-  margin: 4rem 2rem;
+  align-items: center;
+  margin: 1rem 2rem;
   min-height: 75vh;
   padding-bottom: 4rem;
   padding-left: 2rem;
@@ -72,6 +72,11 @@ const BottomDescription = styled('p')(
 )
 const HelenaImage = styled.img`
   margin-top: -1.5rem;
+  height: 8rem;
+
+  ${media.md`
+    height: 14rem;
+  `}
 `
 const ContainerFooter = styled.div`
   background-image: url('img/bottom_texture_mb.png');
@@ -265,6 +270,13 @@ const Rings = styled.img`
 const Row = styled.div`
   width: 100%;
 `
+const Logo = styled.img`
+  height: 7rem;
+
+  ${media.md`
+    height: 17rem;
+  `}
+`
 
 const IndexPage = () => {
   const [form, setForm] = useState({})
@@ -314,7 +326,7 @@ const IndexPage = () => {
               <BorderLine src="img/border_line.png" alt="border line" />
             </div>
             <AstromysticLogoContainer>
-              <img src="img/logo_astromystic.png" alt="logo_astromystic" />
+              <Logo src="img/logo_astromystic.png" alt="logo_astromystic" />
             </AstromysticLogoContainer>
             <Form onSubmit={handlerSubmit}>
               <Inputontainer>
