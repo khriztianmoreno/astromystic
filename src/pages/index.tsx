@@ -140,6 +140,12 @@ const Input = styled('input')(
     padding-bottom: 0.5rem;
     width: 100%;
 
+    &::placeholder {
+      color: ${theme.colors.marigold};
+      font-family: ${theme.fontFaces.Fortescue.regular};
+      font-size: 1.6rem;
+  }
+
     ${media.md`
       font-size: 2.5rem;
     `}
@@ -172,7 +178,7 @@ const SubscriptionChecked = styled('label')(
 )
 const ButtonSubmit = styled('button')(
   ({ theme }) => css`
-    bottom: 2rem;
+    bottom: 2.3rem;
     color: ${theme.colors.marigold};
     font-size: 1.5rem;
     position: absolute;
@@ -208,20 +214,26 @@ const TextureImage = styled.div`
   `}
 `
 const ContainerLeftSideText = styled.div`
+  position: absolute;
+  height: 100%;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  left: -0.8rem;
+
   ${media.md`
-    position: absolute;
-    top: 21vh;
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
+    left: 0;
   `}
 `
 const ContainerRightSideText = styled.div`
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  position: absolute;
+  right: -0.8rem;
+  top: 39.5vh;
+
   ${media.md`
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    position: absolute;
     right: 0;
-    top: 27vh;
+    top: 25vh;
   `}
 `
 const ContentMain = styled.div`
@@ -322,15 +334,16 @@ const IndexPage = () => {
             </AstromysticLogoContainer>
             <Form onSubmit={handlerSubmit}>
               <Inputontainer>
-                <Label htmlFor="email">
+                {/* <Label htmlFor="email">
                   <span>Email</span>
-                </Label>
+                </Label> */}
                 <div>
                   <Input
                     type="email"
                     name="email"
                     id="email"
                     required
+                    placeholder="E-mail"
                     onChange={handleInputChange}
                   />
                 </div>
