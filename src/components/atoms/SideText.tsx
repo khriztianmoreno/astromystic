@@ -20,7 +20,7 @@ const Text = styled('div')<TextProps>(
     `} */
 
     p {
-      font-size: 2rem;
+      font-size: 4rem;
       font-style: normal;
       line-height: 2.1rem;
 

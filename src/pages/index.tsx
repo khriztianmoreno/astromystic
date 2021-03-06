@@ -135,9 +135,6 @@ const Input = styled('input')(
     font-family: ${theme.fontFaces.Fortescue.regular};
     font-size: 1.6rem;
     height: 3rem;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 0.5rem;
     width: 100%;
 
     &::placeholder {
@@ -178,9 +175,9 @@ const SubscriptionChecked = styled('label')(
 )
 const ButtonSubmit = styled('button')(
   ({ theme }) => css`
-    bottom: 2.3rem;
+    bottom: 1rem;
     color: ${theme.colors.marigold};
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position: absolute;
     right: 0;
 
@@ -218,7 +215,7 @@ const ContainerLeftSideText = styled.div`
   height: 100%;
   transform: rotate(180deg);
   writing-mode: vertical-lr;
-  left: -0.8rem;
+  left: -1.2rem;
 
   ${media.md`
     left: 0;
@@ -228,8 +225,8 @@ const ContainerRightSideText = styled.div`
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   position: absolute;
-  right: -0.8rem;
-  top: 39.5vh;
+  right: -1.2rem;
+  top: 29.7vh;
 
   ${media.md`
     right: 0;
