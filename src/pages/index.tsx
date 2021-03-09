@@ -70,7 +70,7 @@ const BottomDescription = styled('p')(
   `
 )
 const HelenaImage = styled.img`
-  margin-top: -1.5rem;
+  margin-top: 1rem;
   height: 8rem;
 `
 const ContainerFooter = styled.div`
@@ -354,7 +354,7 @@ const IndexPage = () => {
                   onChange={handleInputChange}
                 />
                 <span>
-                  Quiero conocer mas sobre Astromystic y acepto las condiciones.
+                  Quiero conocer más sobre Astromystic y acepto las condiciones.
                 </span>
               </SubscriptionChecked>
             </Form>
