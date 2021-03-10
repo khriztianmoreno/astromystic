@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import jsonp from 'jsonp'
 
 import { styled, media, css } from '~/styles'
 
@@ -283,7 +284,9 @@ const Logo = styled.img`
 `
 
 const IndexPage = () => {
-  const [form, setForm] = useState({})
+  const [form, setForm] = useState({ email: null })
+
+  const url = 'https://khriztianmoreno.us1.list-manage.com/subscribe/post?u=81c8d99cac4fe42e25dc45ec9&id=51f765dffd'
 
   const handleInputChange = ({ target }) => {
     const value = target.type === 'checkbox' ? target.checked : target.value
@@ -297,8 +300,24 @@ const IndexPage = () => {
 
   const handlerSubmit = (evt) => {
     evt.preventDefault()
-    console.log(form)
+
+    const email = encodeURIComponent(form.email)
+    const path = `${url}&EMAIL=${email}`
+    const api = path.replace('/post?', '/post-json?')
+    console.log("🚀 ~ file: index.tsx ~ line 307 ~ handlerSubmit ~ api", api)
+    jsonp(api, { param: "c" }, (err, data) => {
+      if (data.msg.includes("already subscribed")) {
+        console.log({ status: 'duplicate' });
+      } else if (err) {
+        console.log({ status: 'error' });
+      } else if (data.result !== 'success') {
+        console.log({ status: 'error' });
+      } else {
+        console.log({ status: 'success' });
+      };
+    });
   }
+
   return (
     <Container>
       <AbsoluteCenterDiv>
